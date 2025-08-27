@@ -1,0 +1,1042 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family:'ArimaMadurai-Regular', sans-serif;
+}
+
+@font-face {
+  font-family:'IrishGrover-Regular';
+  src:url(../FONT/irish-grover/IrishGrover-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'ArimaMadurai-Regular';
+  src:url(../FONT/arima-madurai/ArimaMadurai-Regular.ttf);
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #3d2e1e;
+  text-align: center;
+  font-family: 'IrishGrover-Regular', serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #3d2e1e;
+  text-align: center;
+  font-family: 'ArimaMadurai-Regular', serif;
+}
+
+hr{
+  width: 60px;
+  border: 2px solid #a68263; 
+  margin: 0.5rem auto 2rem; 
+  border-radius: 2px; 
+  text-align: center;
+}
+
+.text-column2 hr {
+  width: 60px;
+  border: 2px solid #a68263;
+  margin: 0.5rem auto 2rem;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.nav ul li{
+  cursor: pointer;
+}
+
+.nav img {
+  align-content: center;
+  width: 1.5rem;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.trad img:hover {
+  transform: scale(1.1);
+}
+
+p{
+  font-size: 18px;
+}
+
+.background{
+  background-color: #FFFAF5;;
+}
+
+section {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background:#3b1f13;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+section:hover::before {
+  transform: translateY(0);
+}
+
+section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/**/
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header .menu ul {
+    display: inline-block;
+    margin: 1% 5%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  footer .footer-left {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav li ul,
+  .nav li:hover ul {
+    display: none !important;
+  }
+}
+
+/*HEADER*/
+.header {
+  position: fixed;
+  background-color: #D8C6B2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4%;
+  width: 95%;
+  z-index: 1000;
+}
+
+.header div img{
+  width: 3.5rem;
+}
+
+.header .title {
+  color: #2B1100;
+  font-weight: bold;
+  display: flex;
+}
+
+.header .title a{
+  color: #2B1100;
+  font-size: 2%;
+  margin: 0 5px;
+}
+
+.header .title a p{
+  color: #2B1100;
+  font-size: 20px;
+  margin: 0 8px;
+  font-family:'IrishGrover-Regular';
+}
+
+.header .title a h1{
+  color: #2B1100;
+  font-size: 15px;
+  margin: 0 8px;
+  font-family:'ArimaMadurai-Regular';
+}
+
+.header nav ul li a:hover {
+  color: #8d765d;
+}
+
+
+/*NAV*/
+ul{
+  list-style: none;
+}
+
+.title a .nav a{
+  text-decoration: none;
+}
+
+.nav ul img{
+  width: 1rem;
+  height: auto;
+}
+
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu a{
+  color: #2B1100;
+  font-size: 15px;
+  transition: color 0.4s;
+}
+
+/*menu secuandario*/
+.nav .menu ul li ul li a{
+  z-index: 1000;
+}
+
+.nav .menu li ul li.divisor {
+  height: 1px;
+  background-color: #2B1100;
+  margin: 5px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav .menu li ul li.divisor a {
+  display: none;
+}
+			
+.nav li a {
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+}
+						
+.nav li ul {
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+			
+.nav li:hover > ul {
+  display:block;
+}
+			
+.nav li ul li {
+  background-color: #D8C6B2;
+	position:relative;
+  box-shadow: 2px 2px 2px #8b5e3c;
+}
+
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon{
+  width: 2.5rem;
+  display: flex;
+}
+
+/*submenu */
+.user-menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #D8C6B2;
+  padding: 5px 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #8b5e3c;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.user-menu:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #2B1100;
+  display: block;
+}
+
+.submenu li a:hover {
+  color: #8b5e3c;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #D8C6B2;
+  color: #2B1100;
+  padding: 1.5% 20% 1% 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+footer .footer-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+footer .footer-left img {
+  width: 4rem;
+  margin-right: 5px;
+}
+
+footer .footer-left div {
+  line-height: 25px;
+}
+
+
+footer .footer-column h4 {
+  font-weight: bold;
+}
+
+footer .footer-column p {
+  line-height: 25px;
+  margin: 2px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+footer .footer-column p:hover {
+  color: #8b5e3c;
+}
+
+footer p{
+  font-size: 14px;
+}
+/*SECCION GENERAL*/
+section{
+  padding: 20px 110px 20px;
+}
+
+/*Section1 - ARTE*/
+.contenedor {
+  padding: 70px 0 120px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  align-items: center;
+}
+
+.letras{
+  display: inline-block;
+  padding: 8px 18px;
+  margin: 0;
+  border-radius: 6px;
+  background: #fffdf8;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  font-size: 1.2rem;
+  color: #3d2e1e;
+  text-align: center;
+  font-family: 'IrishGrover-Regular', serif;
+}
+
+.lam{
+  position: absolute;
+  width: 200px;
+  top: 8%;
+  left: -2%;
+}
+
+.lam2{
+  position: absolute;
+  width: 200px;
+  top: 8%;
+  left: 88%;
+}
+
+.poste{
+  position: absolute;
+  width: 1000px;
+  top: 45%;
+  left: -1.5%;
+}
+
+.poste1{
+  position: absolute;
+  width: 1000px;
+  top: 45%;
+  left: 68.7%;
+}
+
+.image-column,
+.image-column1 {
+  position: relative;
+  width: 269px;
+  height: auto;
+  text-align: center;
+  font-family:'IrishGrover-Regular';
+  font-size: 20px;
+}
+
+.image-column1 {
+  padding-top: 80px;
+}
+
+.uno, .cinco, .tres, .siete {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  filter: drop-shadow(0  2px 4px rgba(0, 0, 0, 0.589)); 
+}
+
+.dos, .seis {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.cuatro, .ocho {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+
+/*MODAL*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.562);
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+.modal-content {
+  background-color: #D8C6B2;
+  margin: 120px auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  color: #222;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 150px 0 10px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contenedor-2 {
+    padding: 150px 0 10px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-column {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .text-column2 { 
+    text-align: center;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .text-column,
+  .image-column,
+  .uno {
+    flex: none;
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/*Section2 - Artes Visuales*/
+
+
+.section2{
+  background-color: #D8C6B2;
+}
+
+.contenedor-2 {
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
+  align-items: center;
+}
+
+.text-column2 {
+  flex: 1;
+  min-width: 150px;
+  padding: 0 50px;
+}
+
+.img-art {
+  position: relative;
+  width: 400px; 
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nueve {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+.diez {
+  position: absolute;
+  width: 95%;
+  height: auto;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.felcha-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;  
+}
+
+.felcha{
+  width: 50px;
+  height: auto;
+}
+
+/*Section3 - Clasificación Artes Visuales*/ 
+.image{ 
+  padding-top: 3%; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
+} 
+
+.clasificacion-artes { 
+  padding: 2rem; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;    
+  gap: 2rem;                  
+  text-align: center;  
+} 
+
+.textoClas {
+  flex: 1;
+  text-align: center;
+  padding: 0 90px;
+}
+
+.clasificacion-artes hr { 
+  width: 60px;
+  border: 2px solid #a68263; 
+  margin: 0.5rem auto 2rem; 
+  border-radius: 2px; 
+  text-align: center; 
+} 
+
+.tarjetas { 
+  display: flex; 
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory; 
+  scroll-behavior: smooth; 
+  gap: 0;  
+  padding: 0; 
+  width: 100%; 
+  height: auto; 
+  scrollbar-width: none; 
+} 
+
+.tarjetas::-webkit-scrollbar { 
+  height: 10px; 
+} 
+
+.tarjetas::-webkit-scrollbar-track { 
+  background: transparent; 
+} 
+
+.tarjetas::-webkit-scrollbar-thumb { 
+  background-color: #a68263; 
+  border-radius: 6px; 
+} 
+  
+.tarjeta { flex: 0 0 100%; 
+  scroll-snap-align: start; 
+  background-color: #deccb8; 
+  border-radius: 16px; 
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  transition: transform 0.3s ease; 
+} 
+
+.tarjeta:hover { 
+  transform: translateY(-6px); 
+} 
+
+.tarjeta img { 
+  width: 100%; 
+  height: 180px; 
+  object-fit: cover; 
+} 
+
+.tarjeta h2 { 
+  margin: 1rem 0 0.5rem; 
+  font-size: 1.3rem; 
+  color: #2b1d13; 
+  text-decoration: underline; 
+} 
+
+.tarjeta p { 
+  font-size: 1rem; 
+  padding: 0 1rem 0.5rem; 
+  color: #3d2e1e; 
+} 
+  
+.tarjeta em { 
+  display: block; 
+  margin-top: 0.3rem; 
+  font-style: italic; 
+  color: #6b4e36; 
+} 
+
+.boton-vermas { 
+  margin: 1rem; 
+  padding: 0.5rem 1rem; 
+  background-color: #a68263; 
+  color: #fff; 
+  border: none; 
+  border-radius: 8px; 
+  font-size: 1rem; 
+  cursor: pointer; 
+  text-decoration: none; 
+  text-align: center; 
+  transition: background-color 0.3s ease; 
+} 
+
+.boton-vermas:hover { 
+  background-color: #8d6b4f;
+}
+
+.contenedor-clasificacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+  
+.carrusel-container { 
+  position: relative; 
+  width: 28%; 
+  overflow: hidden; 
+  min-width: 300px;
+  margin-left: 150px;
+} 
+
+.carrusel { 
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  top: auto;
+  left: auto;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.izquierda { left: 10px; }
+.derecha { right: 10px; }
+
+.carrusel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+
+/*Section4 - Frase Diaria*/
+.section3{
+  background-color: #D8C6B2;
+}
+.frase {
+  padding: 5px 25% 5px 25%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.divider2 {
+  width: 100%;
+  height: 2px;
+  background-color: #3b1f13;
+  margin: 10px auto 10px auto;
+}
+
+.text-frase {
+  flex: 1;
+  min-width: 200px;
+  padding-left: 2%;
+  text-align: center;
+}
+
+.text-frase p{
+  font-size: 20px;
+}
+
+.image-frase {
+  flex: 0 0 100px;
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-frase img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .frase {
+    padding: 10px 0 10px 0;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .text-frase,
+  .image-frase {
+    flex: none;
+    width: 60%;
+    min-width: unset;
+  }
+}
+
+/*Section5 - Nuevo Arte*/
+.newart {
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.text-newart {
+  flex: 1;
+  min-width: 350px;
+  padding-right: 2%;
+  font-size: 15px;
+}
+
+.img-newart {
+  flex: 0 0 300px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-newart img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*SECCION: Galería de Obras*/
+.section2 h2 {
+  font-size: 28px;
+  color: #3b1f13;
+}
+
+a{
+  text-decoration: none;
+}
+
+.galeria-section {
+  padding: 80px 40px;
+  background-color: #decab3;
+  text-align: center;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+.cuadro {
+  position: relative;
+  width: 230px;  
+  margin: auto;
+  text-align: center;
+}
+
+.cuadro .marco {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+.cuadro .obra {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 82%;     
+  height: 70%;   
+  object-fit: contain; 
+  z-index: 4;
+  border-radius: 4px;
+}
+
+.letrero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: bold;
+  color: #3b1f13;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.letrero span {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.pincel {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.pincel:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content1 {
+  background-color: #D8C6B2;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 12px;
+  color: #222;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s;
+  position: relative;
+  display: flex;             
+  gap: 20px;                  
+  align-items: flex-start;   
+  max-width: 900px;  
+}
+
+.modal-texto {
+  flex: 1;      
+  padding-left: 50px;
+}
+
+
+.modal-content1 h2 {
+  margin-top: 0;
+}
+
+.close1 {
+  color: #555;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close1:hover {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+#modal-img {
+  width: 40%;           
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  object-fit: contain;
+}
+
+/*TIP DEL DÍA*/
+.text-tip {
+  flex: 1;
+  min-width: 350px;
+  padding-left: 5%;
+}
+.column-left {
+  padding: 5px 0 5px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.imgtip {
+  flex: 0 0 400px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgtip img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .column-left {
+    padding: 10px 0 10px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-tip {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .text-tip,
+  .imgtip {
+    flex: none;
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+}
+
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: contain;
+}
+
+.social-icons a {
+  display: inline-flex;
+  color: #2B1100;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #8b5e3c;
+}
+

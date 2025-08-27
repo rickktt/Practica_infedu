@@ -1,0 +1,35 @@
+/* Aseguramos que la imagen de fondo ocupe toda el área */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Ajusta el tamaño de la imagen según sea necesario */
+  margin: auto;
+}
+
+/* Establecemos que la imagen ocupe todo el contenedor */
+.background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilizamos el botón */
+.btn {
+  position: absolute;
+  top: 20px;  /* Ajusta la distancia desde la parte superior */
+  left: 50%;
+  transform: translateX(-50%);  /* Centra el botón horizontalmente */
+  padding: 10px 20px;
+  background-color: #ff8c00;  /* Color de fondo */
+  color: white;  /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cambiar el color al pasar el ratón por encima */
+.btn:hover {
+  background-color: #e77c00;
+}

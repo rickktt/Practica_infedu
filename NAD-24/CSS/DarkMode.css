@@ -1,0 +1,57 @@
+/* Variables para modo oscuro */
+[data-theme="dark"] {
+  --bg-primary: #1a120b;
+  --bg-secondary: #3c2a21;
+  --bg-tertiary: #4d3a2a;
+  --text-primary: #e5e5cb;
+  --text-secondary: #d5cea3;
+  --accent-primary: #b68d64;
+  --accent-secondary: #a5825f;
+  --card-bg: #3c2a21;
+  --modal-bg: #3c2a21;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --border-color: #b68d64;
+  --header-bg: #3c2a21;
+  --footer-bg: #3c2a21;
+  --section-bg: #1a120b;
+  --section-border: #b68d64;
+  --button-bg: #b68d64;
+  --button-hover: #a5825f;
+  --divider-color: #e5e5cb;
+  --letras-bg: #3c2a21;
+  --letras-color: #e5e5cb;
+}
+
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.1);
+}
+
+.theme-icon {
+  font-size: 24px;
+}
+
+/* Ocultar el icono que no corresponde al tema actual */
+[data-theme="dark"] .moon-icon,
+[data-theme="light"] .sun-icon {
+  display: none;
+}
