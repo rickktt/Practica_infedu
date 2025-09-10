@@ -1,0 +1,232 @@
+
+
+p {
+  font-size: 18px;
+}
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: 'IrishGrover-Regular', serif;
+  color: var(--text-secondary);
+}
+
+h2 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'ArimaMadurai-Regular', serif;
+}
+
+ul{
+  list-style: none;
+  text-decoration: none;
+}
+hr{
+  width: 60px;
+  border: 2px solid #a68263; 
+  margin: 0.5rem auto 2rem; 
+  border-radius: 2px; 
+  text-align: center;
+  border: 2px solid var(--accent-primary);
+}
+
+
+section {
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: #3b1f13;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+section:hover::before {
+  transform: translateY(0);
+}
+
+section:hover {
+  box-shadow: 0 8px 20px var(--shadow-color);
+  transform: translateY(-4px);
+}
+
+/*SECCION GENERAL*/
+section {
+  padding: 8% 8% 4%;
+}
+
+.lam{
+  position: absolute;
+  width: 200px;
+  top: 3.3%;
+  left: -2%;
+}
+
+.lam2{
+  position: absolute;
+  width: 200px;
+  top: 3.3%;
+  left: 88%;
+}
+
+/*Section - ARTES**/
+.image {
+  padding-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.image-column {
+  position: relative;
+  width: 220px; 
+  text-align: center;
+  margin: 0 auto;
+}
+
+.letras.uno {
+  margin-top: 10px;
+  border-radius: 6px;
+  padding: 4px 6px;
+  background-color: var(--letras-bg);
+  color: var(--letras-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  font-size: 1rem;
+  font-family: 'IrishGrover-Regular', serif;
+}
+
+
+.art-class {
+  margin: 0.8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s ease, max-width 0.5s ease;
+  box-shadow: 0 4px 8px var(--text-primary);
+  width: auto;
+  max-width: 250px;
+  max-height: 400px;
+}
+
+.art-class:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px var(--accent-primary);
+  z-index: 1
+}
+
+.art-class img {
+  width: 220px;
+  height: 340px;
+  padding: 15px 15px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.art-class h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.art-class p {
+  font-size: 16px;
+  margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.art-class h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  transition: transform 0.5s;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+  color: var(--text-primary);
+}
+
+.art-class h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: width 0.3s ease;
+}
+
+.art-class:hover h3::after {
+  width: 100%;
+}
+
+.art-class:hover h3 {
+  color: var(--text-primary);
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--border-color);
+}
+
+.art-class .padding {
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  overflow: hidden;
+  white-space: normal;
+  display: inline-block;
+}
+
+.art-class.activa .padding {
+   transform: scaleX(1);
+   opacity: 1;
+   padding-right: 20px;
+   width: auto;
+   max-height: 350px;
+   overflow-y: auto;   
+   overflow-x: hidden; 
+}
+
+
+.art-class.activa {
+  max-width: 600px;
+  max-height: 400px;
+}
+
+
+.art-class.activa .padding::-webkit-scrollbar {
+  width: 8px;
+}
+
+.art-class.activa .padding::-webkit-scrollbar-track {
+  background: rgba(171, 130, 99, 0.1);
+  border-radius: 10px;
+}
+
+.art-class.activa .padding::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 10px;
+}
+
+.art-class.activa .padding::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
